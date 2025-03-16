@@ -45,5 +45,56 @@ export default class Multiplicacao extends Calculo{
 }
 ```
 
-## Calculadora
+## Operações
 
+Cada operação ocorrerá sempre sobre dois números, que serão fornecidos pelo usuário.
+
+```typescript
+switch(operacao){
+    case 'Somar':
+        let calculo = new Soma()
+        console.log(`O resultado da operação é: ${calculo.calcular(numero1, numero2)}\n`)
+        break;
+    case 'Subtrair':
+        let calculo = new Subtracao()
+        console.log(`O resultado da operação é: ${calculo.calcular(numero1, numero2)}\n`)
+        break;
+    case 'Multiplicar':
+        let calculo = new Multiplicacao()
+        console.log(`O resultado da operação é: ${calculo.calcular(numero1, numero2)}\n`)
+        break;
+}
+```
+
+O usuário poderá escolher quais operações ele quer fazer, sobre os dois números.
+
+## Um processo para cada operação
+
+Cada operação deverá ser feita por uma classe, utilizando o polimorfismo.
+
+
+## Objetivo, parte 1
+
+A primeira parte de objetivos é o desenvolvimento das operações básicas.
+
+A calculadora deve permitir os cálculos de soma, subtração, divisão, potenciação e radiciação.
+
+Os cálculos devem sempre utilizar dois números!
+
+## Objetivos, parte 2
+
+Construa também, a opção de calcular as raízes de uma função do segundo grau, utilizando a fórmula de bhaskara. Neste caso, o
+usuário poderá informar mais que dois número.
+
+## Biblioteca para receber dados do usuário...
+
+```typescript
+import * as readline from 'readline';
+```
+
+
+Módulo readline, do Node.js, permite o recebimento de um fluxo de dados, inseridos pela linha de comando. Por isso, o módulo readline
+facilita a entrada ou leitura de dados fornecidos pelo usuário. <br>
+
+
+https://nodejs.org/api/readline.html
