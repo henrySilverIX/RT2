@@ -15,12 +15,23 @@ export default class QuadEquation{
     }
 
     public delta():number{
-        return (this.coef_b ** 2) - (4 * this.coef_a * this.coef_c)
+        return ((this.coef_b ** 2) - (4 * this.coef_a * this.coef_c))
     }
 
     public calcularRaizes():void{
         if(this.delta() < 0){
-            console.log("O número é complexo")
+            let delta_positivo = Math.abs(this.delta())
+
+            let z1_real = -this.coef_b / 2 * this.coef_a
+            let z2_real = -this.coef_b / 2 * this.coef_a
+
+            let z1_imag = this.raiz.calcular(delta_positivo, 2) / 2 * this.coef_a
+            let z2_imag = this.raiz.calcular(delta_positivo, 2) / 2 * this.coef_a
+
+            let z1 = z1_real + ' + ' + (z1_imag.toFixed(3) + 'i');
+            let z2 = z2_real + ' - ' + (z2_imag.toFixed(3) + 'i');
+
+            console.log(`As raízes complexas são: z1 = ${z1} e z2 = ${z2}`)
         }
         else if(this.delta() === 0){
             let result = -this.coef_b / 2 * this.coef_a

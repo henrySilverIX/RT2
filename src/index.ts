@@ -87,11 +87,15 @@ leitor.question(
           Number(lista_coef[1]),
           Number(lista_coef[2])
         );
-
+    
         equacao_2.calcularRaizes();
-
+    
         leitor.close();
       }
     );
+
   }
 );
+
+
+
