@@ -140,7 +140,8 @@ export default class QuadEquation{
     }
 }
 ```
-Considere as equações: 
+Considere as equações:
+
     1. x^2-4x+4 = 0;
     Única raiz real (raiz dupla): 𝑥 = 2
 
