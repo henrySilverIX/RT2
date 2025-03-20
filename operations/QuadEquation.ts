@@ -1,13 +1,17 @@
 import Calculo from "./Calculo";
 import Root from "./Root"
 
-export default class QuadEquation{
+export default class QuadEquation extends Calculo{
+    public calcular(num1: number, num2: number): number {
+        throw new Error("Method not implemented.");
+    }
     public coef_a:number;
     public coef_b:number;
     public coef_c:number;
     public raiz:Root;
 
     constructor(coeficiente_a:number, coeficiente_b:number, coeficiente_c:number){
+        super()
         this.coef_a = coeficiente_a;
         this.coef_b = coeficiente_b;
         this.coef_c = coeficiente_c;
